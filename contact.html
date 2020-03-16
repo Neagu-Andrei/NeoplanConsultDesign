@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact - Neoplan Consult Design</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header>
+        <h1>Contact</h1>
+    </header>
+    <main>
+      <!-- Tipuri de inputuri pentru formular: https://www.w3schools.com/html/html_form_input_types.asp  -->
+        <form action="">
+          <label for="username">Utilizator:</label>
+          <input type="text" id="username" name="username" placeholder="Neagu_Andrei" required>
+          <br><br>
+          <label for="email">Adresa de email:</label>
+          <input type="email" id="email" name="email" placeholder="andreineagu672@gmail.com" required>
+          <br><br>
+          <label for="password">Parola:</label>
+          <input type="password" id="password" name="password" required>
+          <br><br>
+
+          <p> Varsta:</p>
+          <input type="radio" name="age" value="0-25" id="option-1">
+          <label for="option-1">0-25</label>
+          <input type="radio" name="age" value="26-50" id="option-2">
+          <label for="option-2">26-50</label>
+          <input type="radio" name="age" value="51+" id="option-3">
+          <label for="option-3">51+</label>
+
+          <br><br>
+
+          <label for="question">Intrebare de securitate: </label>
+          <select name="question" id="question">
+            <option value="q1">Care este culoarea ta preferata?</option>
+            <option value="q2">Care este orasul tau natal?</option>
+            <option value="q3">Care este orasul natal al tatalui tau?</option>
+          </select>
+          <br><br>
+          <label for="answer">Raspuns:</label>
+          <input type="text" name="answer" id="answer">
+
+          <br><br>
+
+          <label for="bio">Ce doresti sa ne spui:</label><br>
+          <textarea name="bio" id="bio" rows="8" cols="80" placeholder="Detalii..."></textarea>
+
+          <br><br>
+
+          <input type="submit" value="Trimite formularul">
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+</html>
