@@ -97,3 +97,15 @@
 .toggle .line3{
   transform: rotate(45deg) translate(-5px,-6px);
 }
+
+.link::after{
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #2d3436;
+  transition: width .3s;
+}
+.link:hover::after{
+  width: 100%;
+}
