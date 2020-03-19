@@ -43,11 +43,11 @@
 }
 
 @media screen and (max-width: 768px){
-  body{
+  html, body{
     overflow-x: hidden;
   }
   .nav-links{
-    position: absolute;
+    position: fixed;
     right: 0px;
     height: 92vh;
     top: 26vh;
