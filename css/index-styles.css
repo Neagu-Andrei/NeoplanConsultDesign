@@ -70,6 +70,7 @@
 
 .nav-active{
   transform: translateX(0%);
+  z-index: 2;
 }
 
 @keyframes navLinkFade {
@@ -108,4 +109,35 @@
 }
 .link:hover::after{
   width: 100%;
+}
+.background-overlay{
+    background-image: url('../images/banner_vopsea.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    opacity: 0.8;
+}
+.container{
+  position: absolute;
+  top: 75vh;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px 30px;
+  font-weight: bold;
+  z-index: 1;
+}
+.container h3{
+  font-size: 30px;
+  color: #f5f6fa;
+  padding-bottom: 20px;
+
+}
+.container p{
+  font-size: 16px;
+  color: #f5f6fa;
 }
