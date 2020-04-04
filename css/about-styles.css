@@ -1,0 +1,429 @@
+.main-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: #f5f6fa;
+}
+.logo{
+  width: 200px;
+  height: 150px;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a, .nav-links p{
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #2d3436;
+}
+.submeniu{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 130px;
+  left: 0px;
+  background-color: #f5f6fa;
+  justify-content: space-around;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-property: visibility, opacity;
+}
+#nav-produse:hover .submeniu, #mav-produse:focus .submeniu{
+  opacity: 1;
+  visibility: visible;
+}
+.burger{
+  display:none;
+  -webkit-tap-highlight-color: transparent;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: #2d3436;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+.link::after{
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #2d3436;
+  transition: width .3s;
+}
+.link:hover::after{
+  width: 100%;
+}
+
+
+/*Cum a inceput povestea noastra*/
+html, body{
+  background-color: #F9F9F9;
+}
+
+p{
+  color: #2d3436;
+  letter-spacing: 1px;
+  font-size: 1.3em;
+}
+
+h2{
+  text-align: center;
+  letter-spacing: 2px;
+  color: #2ecc71;
+  padding-bottom: 30px;
+}
+
+.story{
+  padding-top: 50px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.story p{
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+
+/*Review*/
+
+.review{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column-gap: 100px;
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 100px;
+}
+.coloana{
+  padding-left: 15px;
+  border-left: 3px solid #2ecc71;
+}
+.coloana>p:nth-child(1){
+  font-size: 26px;
+  padding-bottom: 20px;
+  letter-spacing: 3px;
+}
+
+.coloana>p:nth-child(2){
+  font-family: 'Oswald';
+}
+
+
+/*Total comenzi efectuate*/
+.wrapper-de-wrapper{
+  height: 80vh;
+  width: 90vw;
+}
+
+.wrapper{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.wrapper span{
+  color: #2d3436;
+  border: 5px solid #2d3436;
+  padding: 0 25px;
+  border-radius: 25px;
+  margin: 0 10px;
+}
+.number{
+  display: inline-block;
+  overflow: hidden;
+  height: 1em;
+  line-height: 1em;
+  font-weight: bold;
+  font-size: 9em;
+}
+.number::after{
+  position: relative;
+  white-space: pre;
+  content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9";
+}
+.first.number::after{
+  animation: animate 0.1s steps(10) infinite;
+
+}
+.second.number::after{
+  animation: animate 1s steps(10) infinite;
+}
+.trird.number::after{
+  animation: animate 10s steps(10) infinite;
+}
+.fourth.number::after{
+  animation: animate 100s steps(10) infinite;
+}
+
+
+/*Back to the top button*/
+#back-to-the-top{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 23px;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  border: 3px solid #2ecc71;
+  border-radius: 50%;
+  background-color: #f5f6fa;
+  color: #2ecc71;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-property: background-color, color;
+}
+
+#back-to-the-top:hover, #back-to-the-top:focus{
+  background-color: #2ecc71;
+  color: #f5f6fa;
+}
+
+
+/*FOOTER*/
+footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-row: auto auto auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #f5f6fa;
+  padding-top: 30px;
+  grid-row-gap: 50px;
+  text-align: center;
+}
+footer ul{
+  list-style-type: none;
+}
+
+footer a{
+    color: #2d3436;
+}
+footer li{
+  color: #2d3436;
+  padding-bottom: 5px;
+}
+footer h4{
+  padding-bottom: 10px;
+}
+.Contact{
+  grid-area: 1/1/2/2; /*row-start,column-start, row-end. column-end*/
+  text-decoration-color: #2d3436;
+}
+.Contact li{
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.Categorii{
+  grid-area: 1/2/2/3;
+}
+.Servicii{
+  grid-area: 1/3/2/4;
+}
+.Suport{
+  grid-area: 1/4/2/5;
+}
+.Social-media{
+  grid-area: 2/1/3/5;
+  display: flex;
+  justify-content: space-around;
+  height: 70px;
+}
+.Social-media a{
+      font-size: 50px;
+      color: #2ecc71;
+      -webkit-tap-highlight-color: transparent;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      transition-property: font-size;
+}
+.Social-media a:hover, .Social-media a:focus{
+  font-size: 55px;
+}
+footer>p{
+  grid-area: 3/1/4/5;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@keyframes animate {
+  0%{
+    top: 0;
+  }
+  100%{
+     top: -10em;
+  }
+
+}
+@media screen and (max-width: 1024px){
+  .nav-links{
+    width: 60%;
+  }
+  .wrapper-de-wrapper{
+    height: 400px;
+  }
+  #back-to-the-top{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  html,body{
+    position: relative;
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 200px;
+    background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .submeniu{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    top: 300px;
+    right: 1000px;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+  }
+
+
+  /*story*/
+  .story{
+    padding-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+  }
+  .story h2{
+    font-size: 23px;
+  }
+
+  .story p{
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    font-size: 18px;
+  }
+
+
+
+  /*review*/
+  .review{
+    display: block;
+    margin-left: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .coloana{
+    padding-left: 15px;
+    margin-bottom: 30px;
+  }
+  .coloana>p:nth-child(1){
+    font-size: 26px;
+    padding-bottom: 20px;
+    letter-spacing: 3px;
+  }
+
+
+
+  /*Animatie*/
+  .wrapper-de-wrapper{
+    height: 100vh;
+  }
+
+  /*Back to the top button*/
+  #back-to-the-top{
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+
+  /*footer*/
+  .Contact{
+    grid-area: 1/1/2/4;
+  }
+  .Categorii{
+    grid-area: 2/1/3/2;
+  }
+  .Servicii{
+    grid-area: 2/2/3/3;
+  }
+  .Suport{
+    grid-area: 2/3/3/4;
+  }
+  .Social-media{
+    grid-area: 3/1/4/4;
+  }
+  footer>p{
+    grid-area: 4/1/5/4;
+  }
+}
+.nav-active{
+  transform: translateX(0%);
+  z-index: 2;
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
