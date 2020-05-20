@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Magazin materiale amenajari interioare">
+    <meta name="keywords" content="Materiale, constructie, vopsea, adezivi, siliconi, parchet, spuma poliuretanica, dezumidificatoare, Pitesti, lambriu, benzi, pensule, pensula">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/contact-styles.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>Contact - Neoplan Consult Design</title>
+  </head>
+  <body>
+    <%-  include('../fragmente/header')  %>
+    <main>
+      <!-- Tipuri de inputuri pentru formular: https://www.w3schools.com/html/html_form_input_types.asp  -->
+        <h1>Contact</h1>
+        <form>
+          <label for="username">Utilizator:</label>
+          <input type="text" id="username" name="username" placeholder="Neagu_Andrei" required>
+          <br><br>
+          <label for="email">Adresa de email:</label>
+          <input type="email" id="email" name="email" placeholder="andreineagu672@gmail.com" required>
+          <br><br>
+          <label for="password">Parola:</label>
+          <input type="password" id="password" name="password" required>
+          <br><br>
+
+          <p> Varsta:</p>
+          <input type="radio" name="age" value="0-25" id="option-1">
+          <label for="option-1">0-25</label>
+          <input type="radio" name="age" value="26-50" id="option-2">
+          <label for="option-2">26-50</label>
+          <input type="radio" name="age" value="51+" id="option-3">
+          <label for="option-3">51+</label>
+
+          <br><br>
+
+          <label for="question">Intrebare de securitate: </label>
+          <select name="question" id="question">
+            <option value="q1">Care este culoarea ta preferata?</option>
+            <option value="q2">Care este orasul tau natal?</option>
+            <option value="q3">Care este orasul natal al tatalui tau?</option>
+          </select>
+          <br><br>
+          <label for="answer">Raspuns:</label>
+          <input type="text" name="answer" id="answer">
+
+          <br><br>
+
+          <label for="bio">Ce doresti sa ne spui:</label><br>
+          <textarea name="bio" id="bio" rows="8" cols="80" placeholder="Detalii..."></textarea>
+
+          <br><br>
+
+          <input type="submit" value="Trimite formularul">
+        </form>
+      <button type="button" id="back-to-the-top" onclick=""><i class="fas fa-angle-double-up"></i></button>
+    </main>
+    <%-  include('../fragmente/footer')  %>
+  </body>
+</html>

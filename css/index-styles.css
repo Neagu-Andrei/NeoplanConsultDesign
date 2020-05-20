@@ -55,6 +55,62 @@
   background-color: #2d3436;
   transition: all 0.3s ease;
 }
+<<<<<<< HEAD
+=======
+@media screen and (max-width: 1024px){
+  .nav-links{
+    width: 60%;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  html, body{
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 19vh;
+    background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.nav-active{
+  transform: translateX(0%);
+  z-index: 2;
+}
+
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+
+
+  }
+
+}
+>>>>>>> f147ffad9b95a80ad96dcd856d68feaf5be37f79
 
 .toggle .line1{
   transform: rotate(-45deg) translate(-5px,6px);

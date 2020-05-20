@@ -1,0 +1,32 @@
+{
+  "name": "neoplan",
+  "version": "1.0.0",
+  "description": "Magazin materiale amenajari interioare",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neagu-Andrei/Neagu-Andrei-NeoplanConsultDesign.git"
+  },
+  "keywords": [
+    "materiale",
+    "amenajari",
+    "interioare",
+    "vopsea",
+    "parchet",
+    "parchet",
+    "laminat"
+  ],
+  "author": "Neagu Andrei-Alexandru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neagu-Andrei/Neagu-Andrei-NeoplanConsultDesign/issues"
+  },
+  "homepage": "https://github.com/Neagu-Andrei/Neagu-Andrei-NeoplanConsultDesign#readme",
+  "dependencies": {
+    "ejs": "^3.1.3",
+    "express": "^4.17.1"
+  }
+}
