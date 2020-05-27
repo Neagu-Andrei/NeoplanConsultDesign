@@ -1,0 +1,49 @@
+{"lastId":5,
+  "produse":[
+    {
+      "id":1,
+      "nume": "vopsea",
+      "descriere": "cea mai jmechera vopsea ever ever never",
+      "pret": 400,
+      "stoc": 1,
+      "data achizitionare": "01-01-2020",
+      "produse similare": ["lavabila","bormasina"]
+    },
+    {
+      "id":2,
+      "nume": "lavabila",
+      "descriere": "cea mai jmechera lavabila ever ever never",
+      "pret": 100,
+      "stoc": 0,
+      "data achizitionare": "03-02-2020",
+      "produse similare": ["vopsea","bormasina"]
+    }
+    {
+      "id":3,
+      "nume": "bormasina",
+      "descriere": "cea mai jmechera bormasina ever ever never",
+      "pret": 1000,
+      "stoc": 1,
+      "data achizitionare": "10-08-2018",
+      "produse similare": ["lavabila","vopsea"]
+    }
+    {
+      "id":4,
+      "nume": "lac",
+      "descriere": "cea mai jmechera lac ever ever never",
+      "pret": 20,
+      "stoc": 0,
+      "data achizitionare": "23-06-2019",
+      "produse similare": ["lavabila","bormasina","vopsea"]
+    }
+    {
+      "id":5,
+      "nume": "disc",
+      "descriere": "cea mai jmechera disc ever ever never",
+      "pret": 33,
+      "stoc": 1,
+      "data achizitionare": "29-12-2018",
+      "produse similare": ["lavabila","bormasina","vopsea","lac"]
+    }
+  ]
+}

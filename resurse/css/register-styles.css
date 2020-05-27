@@ -1,3 +1,4 @@
+/*MAIN*/
 /* Change autocomplete styles in WebKit */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -10,38 +11,41 @@ select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: none;
   -webkit-text-fill-color: #2d3436;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  -webkit-box-shadow: 0 0 0px 1000px #f5f6fa inset;
   transition: background-color 5000s ease-in-out 0s;
 }
-
-body{
+main{
   min-height: 100vh;
   background-image: linear-gradient(120deg,#2ecc71,#dfe6e9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
 }
 
-.login-form{
+.register-form{
   width: 400px;
+  height: 500px;
   background: #f5f6fa;
-  height: 480px;
-  padding: 80px 40px;
+  top: 0%;
+  right: 0%;
   border-radius: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.login-form h1{
+  padding: 80px 40px;
   text-align: center;
-  margin-bottom: 60px;
+}
+.register-form  h1{
+  text-align: center;
+  margin-bottom: 10px;
 }
 
-.txtb{
+.textb{
   border-bottom: 2px solid #adadad;
   position: relative;
-  margin: 20px 0;
+  margin: 25px 0;
+  text-align: left;
 }
 
-.txtb input{
+.textb input{
   font-size: 15px;
   color: #333;
   border: none;
@@ -51,18 +55,17 @@ body{
   padding: 0px  5px;
   height: 30px;
 }
-
-.txtb span::before{
+.textb span::before{
   content: attr(data-placeholder);
   position: absolute;
   top: 50%;
   left:5px;
   color: #adadad;
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: 0;
 }
-
-.txtb span::after{
+/* NU MERGE SA DAI CLICK DIRECT DIN TEXT FFS*/
+.textb span::after{
   content: '';
   float: left;
   width: 100%;
@@ -70,17 +73,62 @@ body{
   background: linear-gradient(120deg,#2ecc71,#dfe6e9, #2ecc71);
   transition: .5s;
 }
-.txtb input:focus + span::before, .txtb input:valid + span::before{
+.textb input:focus + span::before, .textb input:valid + span::before {
   top: -5px;
   width: 100%;
 }
-.txtb input:invalid{
+.textb input:invalid{
   top: -5px;
   box-shadow: none;
   border: none;
 }
+/* RADIO BTTN */
+.radio-group{
+  text-align: left;
+}
+.radio{
+  font-size: 17px;
+  /*font-weight: 500;*/
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: middle;
+  color: #2d3436;
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+}
+.radio + .radio{
+  margin-left: 20px;
+}
+.radio input[type="radio"]{
+  display: none;
+}
+.radio span{
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  border: 2px solid #2ecc71;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.radio span::after{
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #2ecc71;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  border-radius: 50%;
+  transition: 300ms ease-in-out 0s;
+}
 
-/*Daca textul nu este valid la email se vor suprapune... */
+.radio input[type="radio"]:checked ~ span:after{
+    transform: translate(-50%,-50%) scale(1);
+}
 
 .bttn{
   position: static;
@@ -99,10 +147,4 @@ body{
 .bttn:hover{
   background: #2ecc71;
 
-}
-
-.bottom-text{
-  margin-top: 30px;
-  text-align: center;
-  font-size: 13px;
 }
