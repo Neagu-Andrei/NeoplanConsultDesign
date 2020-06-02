@@ -1,11 +1,1 @@
-{"lastId":1useri":
-[
-  {
-  "id":0,
-  "nume":"Neagu",
-  "prenume": "Andrei-Alexandru",
-  "email": "andreineagu672@gmail.com",
-  "parola": "parolaParola",
-  "rol": "admin"
-  }
-]}
+{"lastId":3,"useri":[{"id":0,"nume":"Neagu","prenume":"Andrei-Alexandru","email":"andreineagu672@gmail.com","parola":"parolaParola","dataInreg":"2019-11-22T14:10:52.097Z","rol":"admin"},{"id":1,"email":"andreineagu672@gmail.com","dataInreg":"2020-06-02T12:49:26.948Z","rol":"user"},{"id":2,"email":"andreineagu06072000@yahoo.com","parola":"ad06d3dd0e5f599cc9ad90c1d5606da2","dataInreg":"2020-06-02T12:53:52.130Z","rol":"user"}]}
