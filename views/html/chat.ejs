@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Magazin materiale amenajari interioare">
+    <meta name="keywords" content="Materiale, constructie, vopsea, adezivi, siliconi, parchet, spuma poliuretanica, dezumidificatoare, Pitesti, lambriu, benzi, pensule, pensula">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="height=device-height, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="./css/chat-styles.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <title>Neoplan Consult Design - Chat</title>
+    <script defer src="http://localhost:8080/socket.io/socket.io.js"></script>
+    <script defer src="/js/chat.js"></script>
+  </head>
+  <body>
+      <%-  include('../fragmente/header')  %>
+      <main>
+        <div class="message-container"></div>
+        <form id="send-container">
+            <input type="text" id = "message-input">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+      </main>
+      <%-  include('../fragmente/footer')  %>
+</body>
+</html>

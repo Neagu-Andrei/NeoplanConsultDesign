@@ -17,16 +17,16 @@
       "stoc": 0,
       "data achizitionare": "03-02-2020",
       "produse similare": ["vopsea","bormasina"]
-    }
+    },
     {
       "id":3,
       "nume": "bormasina",
-      "descriere": "cea mai jmechera bormasina ever ever never",
+      "descriere": "cea mai jmechera bormasina ever ever neve",
       "pret": 1000,
       "stoc": 1,
       "data achizitionare": "10-08-2018",
       "produse similare": ["lavabila","vopsea"]
-    }
+    },
     {
       "id":4,
       "nume": "lac",
@@ -35,7 +35,7 @@
       "stoc": 0,
       "data achizitionare": "23-06-2019",
       "produse similare": ["lavabila","bormasina","vopsea"]
-    }
+    },
     {
       "id":5,
       "nume": "disc",

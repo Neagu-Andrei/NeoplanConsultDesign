@@ -7,6 +7,24 @@ var crypto=require('crypto');
 var fs=require('fs');
 var app = express(); //Creeare server
 
+//Pentru aplicatia de chat
+const http=require('http')
+const socket = require('socket.io');
+const server = new http.createServer(app);
+var  io= socket(server)
+io = io.listen(server);//asculta pe acelasi port ca si serverul
+
+io.on("connection", (socket) => {
+	/*
+	if(!conexiune_index)
+		conexiune_index=socket
+		socket.on('disconnect', () => {conexiune_index=null;console.log('Deconectare')});
+		*/
+		console.log("Conectare!");
+		socket.emit('chat-message','Hello World')
+});
+
+
 app.use(session({
 	secret: "parola_sesiune",
 	resave:true,
@@ -97,38 +115,7 @@ app.get('/', function(req, res) {
 	/*afiseaza(render) pagina folosind ejs (deoarece este setat ca view engine) */
     res.render('html/index');
 });
-/*
-app.get('/test', function(req,res){
-  res.render('html/test');
-});
-app.get('/about', function(req,res){
-  res.render('html/about');
-});
-app.get('/contact', function(req,res){
-  res.render('html/contact');
-});
-app.get('/login', function(req,res){
-  res.render('html/login');
-});
-app.get('/myaccount',function(req,res){
-  res.render('html/myaccount');
-});
-app.get('/products', function(req,res){
-  res.render('html/products');
-});
-app.get('/register', function(req,res){
-  res.render('html/register');
-});
-app.get('/ceva', function(req, res) {
-	console.log("whatever")
-	//<link type="image/x-icon"
-	res.setHeader("Content-Type", "text/html");
-	res.write("<html><body>");
-	//if(....)
-	res.write("<p>Ce mai faci?</p></body></html>");
-	res.end();
-});
-*/
+
 app.get("/*",function(req, res){
 	//err este null daca randarea s-a terminat cu succes, si contine eroarea in caz contrar (a survenit o eroare)
 	//rezRandare - textul in urma randarii (compilarii din ejs in html)

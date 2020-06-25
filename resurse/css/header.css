@@ -1,0 +1,141 @@
+/* Navigation */
+.main-nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 200px;
+  background-color: #f5f6fa;
+}
+
+.logo{
+  width: 200px;
+  height: 150px;
+}
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.nav-links li{
+  list-style: none;
+}
+.nav-links a, .nav-links p{
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #2d3436;
+}
+.submeniu{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 130px;
+  left: 0px;
+  background-color: #f5f6fa;
+  justify-content: space-around;
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  transition-property: visibility, opacity;
+}
+#nav-produse:hover .submeniu, #mav-produse:focus .submeniu{
+  opacity: 1;
+  visibility: visible;
+}
+.burger{
+  display:none;
+  -webkit-tap-highlight-color: transparent;
+}
+.burger div{
+  width: 25px;
+  height: 3px;
+  margin: 4px;
+  background-color: #2d3436;
+  transition: all 0.3s ease;
+}
+
+.toggle .line1{
+  transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+  opacity: 0;
+}
+.toggle .line3{
+  transform: rotate(45deg) translate(-5px,-6px);
+}
+.link::after{
+  content: '';
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: #2d3436;
+  transition: width .3s;
+}
+.link:hover::after{
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px){
+  .nav-links{
+    width: 60%;
+  }
+  #back-to-the-top{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+}
+
+@media screen and (max-width: 768px){
+  html,body{
+    position: relative;
+    overflow-x: hidden;
+  }
+  .nav-links{
+    position: absolute;
+    right: 0px;
+    height: 90vh;
+    top: 200px;
+    background-color: #f5f6fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+  .nav-links li{
+    opacity: 0;
+  }
+  .submeniu{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    top: 300px;
+    right: 1000px;
+    width: 100vw;
+    justify-content: space-around;
+  }
+  .burger{
+    display: block;
+    cursor: pointer;
+  }
+  .background-overlay{
+    height: 120vh;
+  }
+}
+@keyframes navLinkFade {
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+}

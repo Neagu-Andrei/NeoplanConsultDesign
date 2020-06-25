@@ -1,0 +1,31 @@
+.wrapper{
+  display: flex;
+  background-image: url('../images/404-fundal.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 110vh;
+  width: 100vw;
+  opacity: 0.8;
+  align-items: center;
+}
+.container{
+  left: 100px;
+  text-align: center;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px 30px;
+  font-weight: bold;
+  z-index: 1;
+  transition: background-color 0.5s;
+}
+.container h3{
+  font-size: 30px;
+  color: #f5f6fa;
+  padding-bottom: 20px;
+}
+.container:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
