@@ -94,7 +94,7 @@ app.post("/login", function(req,res){
 			req.session.utilizator=utiliz;
 
 			//parametrul al doilea al lui render  contine date de transmis catre ejs
-			res.render("html/myaccount");
+			res.render("html/myaccount",{utiliz:req.session.nume});
 		}
 
 
